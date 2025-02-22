@@ -3,17 +3,11 @@ import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
 import robotsTxt from "astro-robots-txt";
 import webmanifest from "astro-webmanifest";
-import vercel from '@astrojs/vercel/static';
 
 // https://astro.build/config
 export default defineConfig({
   site: "https://www.axelvalles.dev/",
   output: "static",
-  adapter: vercel({
-    webAnalytics: {
-      enabled: true,
-    },
-  }),
   integrations: [
     tailwind(),
     sitemap(),
